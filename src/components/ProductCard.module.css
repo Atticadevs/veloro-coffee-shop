@@ -1,0 +1,45 @@
+.card {
+  background: var(--cream);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  /* reveal sets its own transition; hover handled via separate props */
+  transition: opacity 0.7s var(--ease-out), transform 0.35s var(--ease-out), box-shadow 0.35s;
+  transition-delay: var(--delay, 0s), 0s, 0s;
+}
+.card:global(.is-visible):hover {
+  transform: translateY(-8px) scale(1.03) rotate(-0.6deg);
+  box-shadow: var(--shadow-card-lg);
+}
+.imgWrap { position: relative; aspect-ratio: 1; overflow: hidden; }
+.tag {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  background: var(--warm-white);
+  color: var(--rust);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+}
+.body { padding: 1.25rem; }
+.name { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--espresso); }
+.note { font-size: 0.875rem; color: var(--brown-mid); margin-top: 0.25rem; }
+.foot { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; }
+.price { font-weight: 600; font-size: 1.15rem; color: var(--rust); }
+.add {
+  background: var(--rust);
+  color: #fff;
+  border: 0;
+  border-radius: var(--radius-pill);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  min-width: 7.5rem;
+  transition: background 0.2s, transform 0.15s;
+}
+.add:hover { background: var(--brown-mid); }
+.add:active { transform: scale(0.95); }

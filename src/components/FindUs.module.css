@@ -1,0 +1,36 @@
+.section { background: var(--warm-white); padding: 6rem 1.5rem; }
+.container { max-width: var(--container); margin: 0 auto; }
+.heading {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: var(--text-display);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--espresso);
+  margin-bottom: 3rem;
+}
+.heading em { font-style: italic; font-weight: 400; color: var(--rust); }
+.grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+.cards { display: flex; flex-direction: column; gap: 1.25rem; }
+.card {
+  background: var(--cream);
+  border-radius: 1rem;
+  border-left: 4px solid var(--rust);
+  padding: 1.25rem 1.5rem;
+}
+.name { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--espresso); }
+.info { font-size: 0.9rem; color: var(--body); }
+.link { display: inline-block; margin-top: 0.5rem; color: var(--rust); font-weight: 600; }
+.link:hover { text-decoration: underline; }
+.map {
+  background: var(--espresso);
+  border-radius: 1rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--caramel);
+}
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}

@@ -1,0 +1,27 @@
+:root {
+  --cream: #F5EFE4;
+  --espresso: #1E0F07;
+  --rust: #C4411A;
+  --caramel: #D4895A;
+  --warm-white: #FAF7F2;
+  --brown-mid: #6B2F12;
+  --body: #3A1F0D;
+  --dotted-dot: #E8D9C5;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  --text-hero: clamp(3.5rem, 9vw, 8rem);
+  --text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --text-xl2: clamp(1.5rem, 3vw, 2.2rem);
+
+  --radius-card: 24px;
+  --radius-pill: 999px;
+  --shadow-card: 0 8px 32px rgba(30, 15, 7, 0.1);
+  --shadow-card-lg: 0 16px 48px rgba(30, 15, 7, 0.18);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --container: 1200px;
+  --nav-h: 76px;
+}
