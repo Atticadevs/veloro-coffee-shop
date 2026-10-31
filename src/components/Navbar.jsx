@@ -23,7 +23,8 @@ export default function Navbar() {
   }, [open])
 
   return (
-    <header className={`${styles.nav} ${scrolled || open ? styles.scrolled : ''}`}>
+    <>
+    <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${open ? styles.menuOpen : ''}`}>
       <nav className={styles.inner} aria-label="Main">
         <Link to="/" className={styles.wordmark}>Veloro</Link>
 
@@ -56,14 +57,15 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+    </header>
 
-      <div id="mobile-menu" className={`${styles.mobile} ${open ? styles.mobileOpen : ''}`} aria-hidden={!open}>
+    <div id="mobile-menu" className={`${styles.mobile} ${open ? styles.mobileOpen : ''}`} aria-hidden={!open}>
         {links.map((l) => (
           <Link key={l.label} to={l.to} tabIndex={open ? 0 : -1}>{l.label}</Link>
         ))}
         <Link to="/cart" tabIndex={open ? 0 : -1}>Cart ({cartCount})</Link>
         <Link to="/menu" className={styles.order} tabIndex={open ? 0 : -1}>Order Now</Link>
-      </div>
-    </header>
+    </div>
+    </>
   )
 }
